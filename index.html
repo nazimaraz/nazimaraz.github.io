@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nazım Can Araz · C++ Software Engineer</title>
+  <meta name="description" content="Nazım Can Araz is a C++ software engineer in Ankara building real-time systems: defense simulators, an MMORPG server engine, and a FreeRTOS radar DSP pipeline on ARM Cortex-M.">
+  <meta name="author" content="Nazım Can Araz">
+  <link rel="canonical" href="https://nazimaraz.github.io/">
+  <link rel="alternate" hreflang="en" href="https://nazimaraz.github.io/">
+  <link rel="alternate" hreflang="tr" href="https://nazimaraz.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://nazimaraz.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://nazimaraz.github.io/">
+  <meta property="og:title" content="Nazım Can Araz · C++ Software Engineer">
+  <meta property="og:description" content="Real-time C++ systems: defense simulators, an MMORPG server engine, and a FreeRTOS radar DSP pipeline on ARM Cortex-M.">
+  <meta property="og:image" content="https://nazimaraz.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e13" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nazım Can Araz",
+    "url": "https://nazimaraz.github.io/",
+    "image": "https://nazimaraz.github.io/assets/img/avatar.jpg",
+    "jobTitle": "C++ Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ankara University" },
+    "knowsAbout": ["C++", "Real-time systems", "FreeRTOS", "ARM Cortex-M", "Digital signal processing", "Network programming"],
+    "sameAs": ["https://github.com/nazimaraz", "https://www.linkedin.com/in/nazimcanaraz/"]
+  }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Nazım Can Araz, back to top">
+        <span class="brand-mark" aria-hidden="true">NCA</span>
+        <span class="brand-name">Nazım Can Araz</span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="tools">
+        <a class="lang" href="/tr/" hreflang="tr" lang="tr" title="Türkçe">TR</a>
+        <button class="theme-toggle" type="button" aria-label="Dark mode" title="Toggle dark mode">
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================================================================ hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow mono">C++ Software Engineer · Real-time systems · Ankara</p>
+          <h1>Nazım Can Araz</h1>
+          <p class="lede">I write C++ for systems with a deadline: defense vehicle simulators, the server engine of an MMORPG, and now a FreeRTOS radar signal-processing pipeline on ARM Cortex-M.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">See my projects</a>
+            <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/nazimcanaraz/"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn" href="mailto:nzmcnarz@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+          </div>
+        </div>
+
+        <figure class="scope" aria-label="Live spectrum: a JavaScript port of the rt-radar-pipeline Hann, FFT and CA-CFAR chain running on simulated ADC data">
+          <div class="scope-head">
+            <span class="live-dot" aria-hidden="true"></span>
+            <b>rt-radar-pipeline</b>
+            <span class="chain">Hann → FFT-256 → CA-CFAR</span>
+          </div>
+          <canvas id="spectrum" role="img" aria-label="Power spectrum with a dashed CFAR threshold; detected tones are marked with their frequency"></canvas>
+          <figcaption class="scope-foot" id="scope-log" aria-live="off">block #0</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <ul class="stats">
+          <li><strong>6+ yrs</strong><span>professional software engineering</span></li>
+          <li><strong>10,000+</strong><span>entities updated in a fixed 60 Hz server loop</span></li>
+          <li><strong>&lt;50 ms</strong><span>client–server network latency</span></li>
+          <li><strong>0 bytes</strong><span>of heap in the radar firmware</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============================================================== about -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">01 / about</span>
+          <h2 id="about-title">About me</h2>
+        </div>
+        <div class="about-grid">
+          <img class="portrait" src="/assets/img/avatar.jpg" width="200" height="200" alt="Portrait of Nazım Can Araz">
+          <div class="about-text">
+            <p>I'm an <strong>Electrical &amp; Electronics Engineer</strong> (Ankara University, 2020), and most of my career has been C++ that has to finish on time.</p>
+            <p>At <strong>Simsoft</strong> I developed vehicle and turret simulators for defense projects: 60 Hz real-time loops, PID control for aiming and stabilization, and the CIGI link to the image generator. I worked from requirement and test documents and took part in on-site customer acceptance tests. Since 2022 I've been building the server engine of the <strong>Scars of Honor</strong> MMORPG at <strong>Beast Burst</strong> from scratch: a thread-safe ECS, asynchronous networking, and memory pools and lock-free structures that keep the update loop predictable.</p>
+            <p>Now I'm taking that real-time experience closer to the hardware: <strong>bare-metal FreeRTOS on ARM Cortex-M</strong>, radar signal processing, and the rules of safety-critical embedded software. No heap, static allocation, measured deadlines.</p>
+            <p class="subhead">Interests</p>
+            <ul class="chips">
+              <li>Digital &amp; radar signal processing</li>
+              <li>Real-time systems</li>
+              <li>Low-latency software design</li>
+              <li>Modern control theory</li>
+              <li>Modelling &amp; simulation</li>
+              <li>Robotics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">02 / experience</span>
+          <h2 id="experience-title">Work experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="job current">
+            <div class="job-head">
+              <h3>Beast Burst Entertainment</h3>
+              <span class="when">Sep 2022 – Present</span>
+            </div>
+            <p class="role">Server/Engine Software Engineer <span class="where">· Ankara (remote)</span></p>
+            <p>Architected the <em>Scars of Honor</em> MMORPG server engine from scratch in C++23, running on Linux, Windows and macOS.</p>
+            <ul class="points">
+              <li><strong>Real-time concurrency:</strong> a thread-safe Entity Component System that updates 10,000+ entities in a fixed 60 Hz loop, with safe hand-off of entities between threads.</li>
+              <li><strong>Deterministic memory:</strong> memory pools and lock-free structures keep allocation and locks out of the update loop.</li>
+              <li><strong>Asynchronous networking:</strong> client–server layer on Boost.Asio with OpenSSL encryption, compression, time synchronization and FlatBuffers schemas, under 50 ms latency.</li>
+              <li><strong>VoIP:</strong> real-time voice chat over UDP, integrated with the game server (Mumble, gRPC).</li>
+              <li><strong>3D world:</strong> navmesh pathfinding with Recast Navigation, ray casting, 3D collision detection and grid/region-based spatial partitioning.</li>
+              <li><strong>Visual scripting:</strong> a data-driven system like Unreal Engine's Blueprints, built with C++23 and Dear ImGui, so designers change game logic at runtime without recompiling.</li>
+              <li><strong>Architecture &amp; tooling:</strong> the backend's microservice architecture, CI/CD with GitLab and Bash, an async MariaDB layer, and a raylib 3D diagnostics tool.</li>
+              <li><strong>Verification:</strong> unit tests; dynamic analysis with Valgrind and Address, Thread and Memory Sanitizers.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C++23</li><li>Boost.Asio</li><li>FlatBuffers</li><li>OpenSSL</li><li>gRPC</li><li>Dear ImGui</li><li>raylib</li><li>Recast</li><li>MariaDB</li><li>GitLab CI</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>Simsoft Computer Technology</h3>
+              <span class="when">May 2021 – Sep 2022</span>
+            </div>
+            <p class="role">Simulation Software Engineer <span class="where">· Ankara</span></p>
+            <ul class="points">
+              <li>Developed vehicle and turret simulators for defense projects in C++14, running in a 60 Hz real-time loop.</li>
+              <li>Designed <strong>PID control</strong> systems for turret aiming and stabilization.</li>
+              <li>Integrated the <strong>CIGI</strong>-based data transfer layer between the simulation framework and the image generator.</li>
+              <li>Developed to requirement and test documents; took part in <strong>on-site customer acceptance tests</strong>.</li>
+              <li>Built Qt-based diagnostic and UI tools to visualize simulation data.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C++14</li><li>Qt</li><li>CIGI</li><li>PID control</li><li>Real-time simulation</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>ULAK Communication</h3>
+              <span class="when">Aug 2020 – May 2021</span>
+            </div>
+            <p class="role">Software Development Engineer <span class="where">· Ankara</span></p>
+            <p>SDN control-plane components in Java on the ONOS platform, integrating OpenFlow and OVSDB.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>Java</li><li>ONOS</li><li>OpenFlow</li><li>OVSDB</li><li>TCP/IP</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>Doğuş Technology</h3>
+              <span class="when">Jul 2019 – Jul 2020</span>
+            </div>
+            <p class="role">Software Developer Intern</p>
+            <p>RESTful API services with .NET Core on MongoDB, Elasticsearch and MySQL, in an Agile team.</p>
+            <ul class="tags" aria-label="Technologies">
+              <li>C#</li><li>.NET Core</li><li>MongoDB</li><li>Elasticsearch</li><li>MySQL</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">03 / projects</span>
+          <h2 id="projects-title">Projects</h2>
+          <p>Open-source work on GitHub, from bare-metal firmware to WebAssembly.</p>
+        </div>
+
+        <article class="featured">
+          <div>
+            <p class="kicker">Featured · Embedded real-time · 2026</p>
+            <h3>Real-Time Radar DSP</h3>
+            <p>A hard real-time radar signal-processing pipeline on FreeRTOS, running bare metal on an emulated ARM Cortex-M4F (QEMU, MPS2-AN386) and written in C++23. Every 16 ms it takes a block of 256 ADC samples, applies a Hann window and a radix-2 FFT, and detects targets with CA-CFAR.</p>
+            <ul class="checks">
+              <li><strong>No heap.</strong> Dynamic allocation is off and the linker wraps <code>malloc</code>/<code>free</code>, so any heap use fails the build.</li>
+              <li><strong>Own startup code,</strong> linker script and UART driver; no exceptions, no RTTI, no hidden runtime.</li>
+              <li><strong>Zero-copy:</strong> tasks share four static buffers and pass only buffer indexes through queues.</li>
+              <li><strong>Rate-monotonic priorities;</strong> missed deadlines, lost blocks and stack headroom are measured while it runs.</li>
+              <li><strong>OS abstraction layer:</strong> porting to VxWorks or an ARINC 653 partition OS means a new backend, not a new pipeline.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C++23</li><li>FreeRTOS</li><li>ARM Cortex-M4F</li><li>QEMU</li><li>CMake</li><li>DSP</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/nazimaraz/rt-radar-pipeline"><svg aria-hidden="true"><use href="#i-github"/></svg>Source on GitHub</a>
+            </div>
+          </div>
+
+          <div class="featured-visual">
+            <div class="pipeline" aria-label="Pipeline: Sampler every 16 ms, then Processing (Hann, FFT, CFAR), then Reporter, then Logger over UART">
+              <div class="stage"><span class="box">Sampler</span><small>16 ms<br>ADC block</small></div>
+              <div class="stage dsp"><span class="box">Process</span><small>Hann → FFT<br>→ CFAR</small></div>
+              <div class="stage"><span class="box">Report</span><small>detections</small></div>
+              <div class="stage"><span class="box">Logger</span><small>UART,<br>lowest prio</small></div>
+              <div class="pool">4 static blocks · passed by index · never copied</div>
+            </div>
+<pre class="term" aria-label="Firmware console output"><span class="dim">rt-radar-pipeline 0.1.0 | FreeRTOS V11.3.3 | Cortex-M4F @ 25 MHz</span>
+[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0
+[18 ms] #0 <span class="hi">bin 24 (1500 Hz)</span> power 4075.535 thr 27.491
+[18 ms] #0 <span class="hi">bin 80 (5000 Hz)</span> power 991.375 thr 33.315
+[1000 ms] heartbeat #1 | stack headroom 211 words</pre>
+            <ul class="metrics">
+              <li><b>16 ms</b><span>block period</span></li>
+              <li><b>~18 KB</b><span>flash at -Os</span></li>
+              <li><b>22 KB</b><span>RAM</span></li>
+              <li><b>0 B</b><span>heap</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-media">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Three epicycles drawing a square wave">
+                <g fill="none" stroke-width="1.5">
+                  <circle cx="100" cy="112" r="62" stroke="rgba(90,169,255,.35)"/>
+                  <circle cx="150.8" cy="76.4" r="20.7" stroke="rgba(90,169,255,.35)"/>
+                  <circle cx="145.4" cy="56.5" r="12.4" stroke="rgba(90,169,255,.35)"/>
+                  <path d="M100 112 L150.8 76.4 L145.4 56.5 L133.1 55.4" stroke="#5aa9ff" stroke-width="2"/>
+                  <path d="M133.1 55.4 H220" stroke="#f0b44c" stroke-dasharray="4 4" stroke-width="1.2"/>
+                  <path stroke="#58d6c8" stroke-width="2" d="M220,55.4 L222,54.1 L224,56.1 L226,62 L228,71.9 L230,85.5 L232,101.6 L234,118.7 L236,135.1 L238,149.4 L240,160.2 L242,167 L244,169.7 L246,169.1 L248,166.1 L250,162.1 L252,158.4 L254,155.8 L256,155 L258,155.9 L260,158.2 L262,161.1 L264,163.8 L266,165.4 L268,165.6 L270,164.3 L272,161.8 L274,158.8 L276,156.3 L278,155 L280,155.4 L282,157.7 L284,161.2 L286,165.3 L288,168.6 L290,169.9 L292,167.9 L294,162 L296,152.1 L298,138.5 L300,122.4 L302,105.3 L304,88.9 L306,74.6 L308,63.8 L310,57 L312,54.3 L314,54.9 L316,57.9 L318,61.9 L320,65.6 L322,68.2 L324,69 L326,68.1 L328,65.8 L330,62.9 L332,60.2 L334,58.6 L336,58.4 L338,59.7 L340,62.2 L342,65.2 L344,67.7 L346,69 L348,68.6 L350,66.3 L352,62.8 L354,58.7 L356,55.4 L358,54.1 L360,56.1 L362,62 L364,71.9 L366,85.5 L368,101.6 L370,118.7 L372,135.1 L374,149.4 L376,160.2 L378,167 L380,169.7 L382,169.1 L384,166.1 L386,162.1 L388,158.4 L390,155.8"/>
+                </g>
+                <circle cx="133.1" cy="55.4" r="3.5" fill="#f0b44c"/>
+                <text x="16" y="208" fill="rgba(160,180,200,.7)" font-family="IBM Plex Mono, monospace" font-size="11">n = 1, 3, 5</text>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Fourier Series Visualizer</h3>
+              <p>Interactive epicycles, waveforms and complex paths in real time, with 13 built-in shapes. Draw a path with the mouse and a discrete Fourier transform rebuilds it, with live LaTeX formulas alongside.</p>
+              <ul class="tags" aria-label="Technologies"><li>C++23</li><li>raylib</li><li>Dear ImGui</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-play"/></svg>Live demo</a>
+                <a href="https://github.com/nazimaraz/Fourier-Series"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demo: a complex signal's formula, substituted values and real/imaginary waveforms updating in real time">
+            </div>
+            <div class="card-body">
+              <h3>TeXRender</h3>
+              <p>Renders LaTeX math from C++ into raylib or SDL2 windows, Dear ImGui draw lists, offscreen RGBA buffers or SVG files, through one backend-neutral API built on MicroTeX.</p>
+              <ul class="tags" aria-label="Technologies"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/clock.jpg" width="1000" height="622" loading="lazy" alt="A four-digit seven-segment LED clock built on a PIC16F877A microcontroller">
+            </div>
+            <div class="card-body">
+              <h3>Microcontroller Clock</h3>
+              <p>An interrupt-driven seven-segment clock on a PIC16F877A, written in Assembly on my own schematic. The time is set with push buttons.</p>
+              <ul class="tags" aria-label="Technologies"><li>Assembly</li><li>PIC16F877A</li><li>Interrupts</li><li>Schematic design</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/Digital-Clock-Using-Microcontroller"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+<pre class="term" aria-label="cronwhy example output"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
+<span class="hi">At every 15th minute, from 09:00 through
+17:59, Monday through Friday</span>
+
+<span class="dim">  minute        */15   0,15,30,45
+  hour          9-17   9-17
+  day-of-week   1-5    1-5</span></pre>
+            </div>
+            <div class="card-body">
+              <h3>cronwhy</h3>
+              <p>Explains cron expressions and lints whole crontab files: 11 rules catch a stray <code>%</code>, the day-of-month/day-of-week OR trap and jobs lost to DST. A single static binary using only the Go standard library.</p>
+              <ul class="tags" aria-label="Technologies"><li>Go</li><li>CLI</li><li>JSON output</li><li>CI</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="more-head">More on GitHub</h3>
+        <ul class="more">
+          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Work in progress: raylib's C API moved to modern C++ with enum classes, default member initialisers and value types.</span><span class="lang-tag">C++</span></a></li>
+          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">A true-black JetBrains theme with extra semantic highlighting for C++.</span><span class="lang-tag">Plugin</span></a></li>
+          <li><a href="https://github.com/nazimaraz/jetbrains-ai-commit"><span class="name">Commit Messages via Claude Code</span><span class="desc">JetBrains plugin that writes commit messages for only the files you ticked.</span><span class="lang-tag">Java</span></a></li>
+          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome extension: set any HTML5 video's playback speed from the keyboard.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/scrollpilot"><span class="name">Scrollpilot</span><span class="desc">Chrome extension: smooth, speed-adjustable scrolling with the arrow keys.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/Testing-and-Comparison-of-True-and-Pseudo-Random-Number-Generators"><span class="name">True vs. pseudo-random numbers</span><span class="desc">University project: randomness tests applied to PRNG output and true random numbers.</span><span class="lang-tag">MATLAB</span></a></li>
+          <li><a href="https://github.com/nazimaraz/Analysis-of-Finding-Quadratic-Regression-Polynomial"><span class="name">Quadratic regression</span><span class="desc">University project: fit a second-degree polynomial and use it in a projectile-motion simulation.</span><span class="lang-tag">MATLAB</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================== skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">04 / skills</span>
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>Languages</h3>
+            <ul class="tags"><li>C++ 11/14/17/20/23</li><li>C</li><li>Python</li><li>Bash</li><li>Assembly</li><li>Java (basic)</li><li>C# (basic)</li><li>Rust (basic)</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Real-time &amp; embedded</h3>
+            <ul class="tags"><li>FreeRTOS</li><li>ARM Cortex-M</li><li>Multithreading</li><li>Lock-free data structures</li><li>Memory pools</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Design</h3>
+            <ul class="tags"><li>Object-oriented design</li><li>Design patterns</li><li>Data structures &amp; algorithms</li><li>Data-oriented design (ECS)</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Libraries</h3>
+            <ul class="tags"><li>Boost.Asio</li><li>gRPC</li><li>FlatBuffers</li><li>OpenSSL</li><li>zlib</li><li>Qt</li><li>Dear ImGui</li><li>raylib</li><li>Recast Navigation</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Tools</h3>
+            <ul class="tags"><li>Git</li><li>SVN</li><li>CMake</li><li>GitLab CI/CD</li><li>Jira</li><li>GDB</li><li>QEMU</li><li>Valgrind</li><li>Sanitizers</li><li>Linux</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Engineering</h3>
+            <ul class="tags"><li>Control systems (PID)</li><li>Signal processing</li><li>Numerical methods</li><li>MATLAB</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Process</h3>
+            <ul class="tags"><li>Requirement &amp; test document driven development</li><li>Integration</li><li>On-site acceptance tests</li><li>Scrum</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Spoken languages</h3>
+            <ul class="tags"><li>Turkish (native)</li><li>English (advanced)</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================== education -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">05 / education</span>
+          <h2 id="education-title">Education &amp; certification</h2>
+        </div>
+        <div class="edu">
+          <div class="edu-card">
+            <h3>B.Sc. Electrical and Electronics Engineering</h3>
+            <p class="meta">Ankara University <span class="when">· 2015 – 2020</span></p>
+            <dl>
+              <div><dt>GPA</dt><dd>3.32 / 4.00</dd></div>
+              <div><dt>Relevant courses</dt><dd>Microprocessors, Modern Control, Nonlinear Control, Numerical Methods (all A+), Digital Signal Processing</dd></div>
+              <div><dt>Graduation project</dt><dd>I/Q Imbalance Models, Estimation and Compensation</dd></div>
+            </dl>
+          </div>
+          <div class="edu-card">
+            <h3>Advanced C++ Programming Language Course</h3>
+            <p class="meta">Plepa Eğitim <span class="when">· Nov 2025</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact">
+          <span class="num mono">06 / contact</span>
+          <h2 id="contact-title">Let's talk</h2>
+          <p>Working on real-time, embedded or signal-processing software? I'd be glad to hear about it. Email is the quickest way to reach me.</p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:nzmcnarz@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send an email</a>
+            <a class="btn" href="https://www.linkedin.com/in/nazimcanaraz/"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+          </div>
+          <p class="mail">nzmcnarz@gmail.com · Ankara, Türkiye</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Nazım Can Araz</span>
+      <span>Hand-written HTML and CSS, plus a 256-point FFT in JavaScript.</span>
+    </div>
+  </footer>
+</body>
+</html>

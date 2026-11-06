@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nazım Can Araz · C++ Yazılım Mühendisi</title>
+  <meta name="description" content="Nazım Can Araz, Ankara'da gerçek zamanlı sistemler geliştiren bir C++ yazılım mühendisi: savunma simülatörleri, bir MMORPG sunucu motoru ve ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme.">
+  <meta name="author" content="Nazım Can Araz">
+  <link rel="canonical" href="https://nazimaraz.github.io/tr/">
+  <link rel="alternate" hreflang="en" href="https://nazimaraz.github.io/">
+  <link rel="alternate" hreflang="tr" href="https://nazimaraz.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://nazimaraz.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://nazimaraz.github.io/tr/">
+  <meta property="og:title" content="Nazım Can Araz · C++ Yazılım Mühendisi">
+  <meta property="og:description" content="Gerçek zamanlı C++ sistemleri: savunma simülatörleri, bir MMORPG sunucu motoru ve ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme.">
+  <meta property="og:image" content="https://nazimaraz.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e13" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t === "dark" || t === "light") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nazım Can Araz",
+    "url": "https://nazimaraz.github.io/tr/",
+    "image": "https://nazimaraz.github.io/assets/img/avatar.jpg",
+    "jobTitle": "C++ Yazılım Mühendisi",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ankara Üniversitesi" },
+    "knowsAbout": ["C++", "Gerçek zamanlı sistemler", "FreeRTOS", "ARM Cortex-M", "Sayısal sinyal işleme", "Ağ programlama"],
+    "sameAs": ["https://github.com/nazimaraz", "https://www.linkedin.com/in/nazimcanaraz/"]
+  }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">İçeriğe geç</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Nazım Can Araz, başa dön">
+        <span class="brand-mark" aria-hidden="true">NCA</span>
+        <span class="brand-name">Nazım Can Araz</span>
+      </a>
+      <nav class="nav" aria-label="Bölümler">
+        <a href="#about">Hakkımda</a>
+        <a href="#experience">Deneyim</a>
+        <a href="#projects">Projeler</a>
+        <a href="#skills">Yetkinlikler</a>
+        <a href="#education">Eğitim</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+      <div class="tools">
+        <a class="lang" href="/" hreflang="en" lang="en" title="English">EN</a>
+        <button class="theme-toggle" type="button" aria-label="Karanlık mod" title="Karanlık modu aç/kapat">
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================================================================ hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow mono">C++ Yazılım Mühendisi · Gerçek zamanlı sistemler · Ankara</p>
+          <h1>Nazım Can Araz</h1>
+          <p class="lede">Süre sınırı olan sistemler için C++ yazıyorum: savunma projelerinde araç simülatörleri, bir MMORPG'nin sunucu motoru ve şimdi de ARM Cortex-M üzerinde FreeRTOS ile çalışan bir radar sinyal işleme hattı.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">Projelerime göz at</a>
+            <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/nazimcanaraz/"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn" href="mailto:nzmcnarz@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>E-posta</a>
+          </div>
+        </div>
+
+        <figure class="scope" aria-label="Canlı spektrum: rt-radar-pipeline'daki Hann, FFT ve CA-CFAR zincirinin JavaScript kopyası, benzetilmiş ADC verisi üzerinde çalışıyor">
+          <div class="scope-head">
+            <span class="live-dot" aria-hidden="true"></span>
+            <b>rt-radar-pipeline</b>
+            <span class="chain">Hann → FFT-256 → CA-CFAR</span>
+          </div>
+          <canvas id="spectrum" role="img" aria-label="Kesikli CFAR eşiğiyle güç spektrumu; tespit edilen tonlar frekanslarıyla işaretli"></canvas>
+          <figcaption class="scope-foot" id="scope-log" aria-live="off">block #0</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <ul class="stats">
+          <li><strong>6+ yıl</strong><span>profesyonel yazılım mühendisliği</span></li>
+          <li><strong>10.000+</strong><span>nesne, sabit 60 Hz sunucu döngüsünde</span></li>
+          <li><strong>&lt;50 ms</strong><span>istemci–sunucu ağ gecikmesi</span></li>
+          <li><strong>0 bayt</strong><span>heap, radar firmware'inde</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============================================================== about -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">01 / hakkımda</span>
+          <h2 id="about-title">Hakkımda</h2>
+        </div>
+        <div class="about-grid">
+          <img class="portrait" src="/assets/img/avatar.jpg" width="200" height="200" alt="Nazım Can Araz'ın portresi">
+          <div class="about-text">
+            <p><strong>Elektrik-Elektronik Mühendisiyim</strong> (Ankara Üniversitesi, 2020). Kariyerimin büyük bölümünde zamanında bitmesi gereken C++ kodu yazdım.</p>
+            <p><strong>Simsoft</strong>'ta savunma projeleri için araç ve taret simülatörleri geliştirdim: 60 Hz gerçek zamanlı döngüler, nişanlama ve stabilizasyon için PID kontrol, Görüntü Üreteci ile CIGI bağlantısı. Gereksinim ve test dokümanlarına göre çalıştım, sahada müşteri kabul testlerinde görev aldım. 2022'den beri <strong>Beast Burst</strong>'te <strong>Scars of Honor</strong> MMORPG'sinin sunucu motorunu sıfırdan geliştiriyorum: iş parçacığı güvenli bir ECS, asenkron ağ katmanı, güncelleme döngüsünü öngörülebilir tutan bellek havuzları ve lock-free yapılar.</p>
+            <p>Şimdi bu gerçek zamanlı deneyimi donanıma yaklaştırıyorum: <strong>ARM Cortex-M üzerinde bare-metal FreeRTOS</strong>, radar sinyal işleme ve emniyet-kritik gömülü yazılımın kuralları. Heap yok, statik bellek, ölçülen süre sınırları.</p>
+            <p class="subhead">İlgi alanları</p>
+            <ul class="chips">
+              <li>Sayısal ve radar sinyal işleme</li>
+              <li>Gerçek zamanlı sistemler</li>
+              <li>Düşük gecikmeli yazılım tasarımı</li>
+              <li>Modern kontrol teorisi</li>
+              <li>Modelleme ve benzetim</li>
+              <li>Robotik</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">02 / deneyim</span>
+          <h2 id="experience-title">İş deneyimi</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="job current">
+            <div class="job-head">
+              <h3>Beast Burst Entertainment</h3>
+              <span class="when">Eyl 2022 – Halen</span>
+            </div>
+            <p class="role">Sunucu/Motor Yazılım Mühendisi <span class="where">· Ankara (uzaktan)</span></p>
+            <p><em>Scars of Honor</em> MMORPG sunucu motorunu C++23 ile sıfırdan tasarladım; Linux, Windows ve macOS'ta çalışıyor.</p>
+            <ul class="points">
+              <li><strong>Gerçek zamanlı eşzamanlılık:</strong> 10.000'i aşkın nesneyi sabit 60 Hz döngüde güncelleyen, iş parçacığı güvenli bir Entity Component System; nesneler iş parçacıkları arasında güvenle aktarılıyor.</li>
+              <li><strong>Deterministik bellek:</strong> bellek havuzları ve lock-free yapılar sayesinde güncelleme döngüsünde bellek ayırma ve kilit yok.</li>
+              <li><strong>Asenkron ağ katmanı:</strong> Boost.Asio üzerinde istemci–sunucu katmanı; OpenSSL ile şifreleme, sıkıştırma, zaman senkronizasyonu ve FlatBuffers şemaları, 50 ms altı gecikme.</li>
+              <li><strong>VoIP:</strong> UDP üzerinden gerçek zamanlı sesli sohbet, oyun sunucusuyla entegre (Mumble, gRPC).</li>
+              <li><strong>3B dünya:</strong> Recast Navigation ile navmesh yol bulma, ışın izleme (ray casting), 3B çarpışma tespiti ve ızgara/bölge tabanlı uzamsal bölümleme.</li>
+              <li><strong>Görsel betik sistemi:</strong> C++23 ve Dear ImGui ile Unreal Engine Blueprints benzeri, veri güdümlü bir sistem; tasarımcılar oyun mantığını derlemeden, çalışma anında değiştirebiliyor.</li>
+              <li><strong>Mimari ve araçlar:</strong> sunucu altyapısının mikroservis mimarisi, GitLab ve Bash ile CI/CD, asenkron MariaDB katmanı ve raylib ile 3B teşhis aracı.</li>
+              <li><strong>Doğrulama:</strong> birim testleri; Valgrind ve Address, Thread, Memory Sanitizer'larla dinamik analiz.</li>
+            </ul>
+            <ul class="tags" aria-label="Teknolojiler">
+              <li>C++23</li><li>Boost.Asio</li><li>FlatBuffers</li><li>OpenSSL</li><li>gRPC</li><li>Dear ImGui</li><li>raylib</li><li>Recast</li><li>MariaDB</li><li>GitLab CI</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>Simsoft Bilgisayar Teknolojileri</h3>
+              <span class="when">May 2021 – Eyl 2022</span>
+            </div>
+            <p class="role">Simülasyon Yazılım Mühendisi <span class="where">· Ankara</span></p>
+            <ul class="points">
+              <li>Savunma projeleri için C++14 ile 60 Hz gerçek zamanlı döngüde çalışan araç ve taret simülatörleri geliştirdim.</li>
+              <li>Taret nişanlama ve stabilizasyonu için <strong>PID kontrol</strong> sistemleri tasarladım.</li>
+              <li>Simülasyon çatısı ile Görüntü Üreteci arasındaki <strong>CIGI</strong> tabanlı veri aktarım katmanını entegre ettim.</li>
+              <li>Gereksinim ve test dokümanlarına göre geliştirdim; <strong>sahada müşteri kabul testlerinde</strong> görev aldım.</li>
+              <li>Simülasyon verisini görselleştiren Qt tabanlı teşhis ve arayüz araçları geliştirdim.</li>
+            </ul>
+            <ul class="tags" aria-label="Teknolojiler">
+              <li>C++14</li><li>Qt</li><li>CIGI</li><li>PID kontrol</li><li>Gerçek zamanlı simülasyon</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>ULAK Haberleşme</h3>
+              <span class="when">Ağu 2020 – May 2021</span>
+            </div>
+            <p class="role">Yazılım Geliştirme Mühendisi <span class="where">· Ankara</span></p>
+            <p>ONOS platformunda Java ile SDN kontrol düzlemi bileşenleri geliştirdim; OpenFlow ve OVSDB entegrasyonu.</p>
+            <ul class="tags" aria-label="Teknolojiler">
+              <li>Java</li><li>ONOS</li><li>OpenFlow</li><li>OVSDB</li><li>TCP/IP</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <div class="job-head">
+              <h3>Doğuş Teknoloji</h3>
+              <span class="when">Tem 2019 – Tem 2020</span>
+            </div>
+            <p class="role">Yazılım Geliştirici Stajyer</p>
+            <p>Agile bir ekipte .NET Core ile MongoDB, Elasticsearch ve MySQL kullanan RESTful API servisleri geliştirdim.</p>
+            <ul class="tags" aria-label="Teknolojiler">
+              <li>C#</li><li>.NET Core</li><li>MongoDB</li><li>Elasticsearch</li><li>MySQL</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">03 / projeler</span>
+          <h2 id="projects-title">Projeler</h2>
+          <p>GitHub'daki açık kaynak çalışmalarım: bare-metal firmware'den WebAssembly'ye.</p>
+        </div>
+
+        <article class="featured">
+          <div>
+            <p class="kicker">Öne çıkan · Gömülü gerçek zamanlı · 2026</p>
+            <h3>FreeRTOS Radar DSP</h3>
+            <p>Emüle edilmiş bir ARM Cortex-M4F (QEMU, MPS2-AN386) üzerinde bare-metal çalışan, C++23 ile yazılmış katı gerçek zamanlı bir radar sinyal işleme hattı. Her 16 ms'de 256 ADC örneğinden oluşan bir blok alıyor, Hann penceresi ve radix-2 FFT uyguluyor, hedefleri CA-CFAR ile tespit ediyor.</p>
+            <ul class="checks">
+              <li><strong>Heap yok.</strong> Dinamik bellek kapalı ve linker <code>malloc</code>/<code>free</code>'yi sarmalıyor; heap kullanan kod derlenmiyor.</li>
+              <li><strong>Başlangıç kodu,</strong> linker script ve UART sürücüsü bana ait; exception, RTTI ya da gizli bir runtime yok.</li>
+              <li><strong>Sıfır kopya:</strong> görevler dört statik tamponu paylaşıyor; kuyruklardan yalnızca tampon indeksleri geçiyor.</li>
+              <li><strong>Rate-monotonic öncelikler;</strong> kaçırılan süre sınırları, kayıp bloklar ve yığın payı çalışırken ölçülüyor.</li>
+              <li><strong>İşletim sistemi soyutlama katmanı:</strong> VxWorks'e ya da bir ARINC 653 bölmeli işletim sistemine geçmek yeni bir hat değil, yalnızca yeni bir arka uç demek.</li>
+            </ul>
+            <ul class="tags" aria-label="Teknolojiler">
+              <li>C++23</li><li>FreeRTOS</li><li>ARM Cortex-M4F</li><li>QEMU</li><li>CMake</li><li>DSP</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/nazimaraz/rt-radar-pipeline"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub'da kaynak kod</a>
+            </div>
+          </div>
+
+          <div class="featured-visual">
+            <div class="pipeline" aria-label="Hat: her 16 ms'de örnekleyici, ardından işleme (Hann, FFT, CFAR), raporlayıcı ve UART üzerinden günlükleyici">
+              <div class="stage"><span class="box">Sampler</span><small>16 ms<br>ADC bloğu</small></div>
+              <div class="stage dsp"><span class="box">Process</span><small>Hann → FFT<br>→ CFAR</small></div>
+              <div class="stage"><span class="box">Report</span><small>tespitler</small></div>
+              <div class="stage"><span class="box">Logger</span><small>UART,<br>en düşük öncelik</small></div>
+              <div class="pool">4 statik blok · indeksle aktarılıyor · hiç kopyalanmıyor</div>
+            </div>
+<pre class="term" aria-label="Firmware konsol çıktısı"><span class="dim">rt-radar-pipeline 0.1.0 | FreeRTOS V11.3.3 | Cortex-M4F @ 25 MHz</span>
+[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0
+[18 ms] #0 <span class="hi">bin 24 (1500 Hz)</span> power 4075.535 thr 27.491
+[18 ms] #0 <span class="hi">bin 80 (5000 Hz)</span> power 991.375 thr 33.315
+[1000 ms] heartbeat #1 | stack headroom 211 words</pre>
+            <ul class="metrics">
+              <li><b>16 ms</b><span>blok periyodu</span></li>
+              <li><b>~18 KB</b><span>flash (-Os)</span></li>
+              <li><b>22 KB</b><span>RAM</span></li>
+              <li><b>0 B</b><span>heap</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-media">
+              <svg viewBox="0 0 400 225" role="img" aria-label="Kare dalga çizen üç episikl">
+                <g fill="none" stroke-width="1.5">
+                  <circle cx="100" cy="112" r="62" stroke="rgba(90,169,255,.35)"/>
+                  <circle cx="150.8" cy="76.4" r="20.7" stroke="rgba(90,169,255,.35)"/>
+                  <circle cx="145.4" cy="56.5" r="12.4" stroke="rgba(90,169,255,.35)"/>
+                  <path d="M100 112 L150.8 76.4 L145.4 56.5 L133.1 55.4" stroke="#5aa9ff" stroke-width="2"/>
+                  <path d="M133.1 55.4 H220" stroke="#f0b44c" stroke-dasharray="4 4" stroke-width="1.2"/>
+                  <path stroke="#58d6c8" stroke-width="2" d="M220,55.4 L222,54.1 L224,56.1 L226,62 L228,71.9 L230,85.5 L232,101.6 L234,118.7 L236,135.1 L238,149.4 L240,160.2 L242,167 L244,169.7 L246,169.1 L248,166.1 L250,162.1 L252,158.4 L254,155.8 L256,155 L258,155.9 L260,158.2 L262,161.1 L264,163.8 L266,165.4 L268,165.6 L270,164.3 L272,161.8 L274,158.8 L276,156.3 L278,155 L280,155.4 L282,157.7 L284,161.2 L286,165.3 L288,168.6 L290,169.9 L292,167.9 L294,162 L296,152.1 L298,138.5 L300,122.4 L302,105.3 L304,88.9 L306,74.6 L308,63.8 L310,57 L312,54.3 L314,54.9 L316,57.9 L318,61.9 L320,65.6 L322,68.2 L324,69 L326,68.1 L328,65.8 L330,62.9 L332,60.2 L334,58.6 L336,58.4 L338,59.7 L340,62.2 L342,65.2 L344,67.7 L346,69 L348,68.6 L350,66.3 L352,62.8 L354,58.7 L356,55.4 L358,54.1 L360,56.1 L362,62 L364,71.9 L366,85.5 L368,101.6 L370,118.7 L372,135.1 L374,149.4 L376,160.2 L378,167 L380,169.7 L382,169.1 L384,166.1 L386,162.1 L388,158.4 L390,155.8"/>
+                </g>
+                <circle cx="133.1" cy="55.4" r="3.5" fill="#f0b44c"/>
+                <text x="16" y="208" fill="rgba(160,180,200,.7)" font-family="IBM Plex Mono, monospace" font-size="11">n = 1, 3, 5</text>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Fourier Serisi Görselleştirici</h3>
+              <p>Episikller, dalga biçimleri ve karmaşık yollar gerçek zamanlı ve etkileşimli; 13 hazır şekil var. Fareyle çizdiğiniz yolu ayrık Fourier dönüşümü yeniden kuruyor, yanında canlı LaTeX formülleri.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>C++23</li><li>raylib</li><li>Dear ImGui</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-play"/></svg>Canlı demo</a>
+                <a href="https://github.com/nazimaraz/Fourier-Series"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demosu: karmaşık bir sinyalin formülü, yerine konmuş değerleri ve gerçel/sanal dalga biçimleri gerçek zamanlı güncelleniyor">
+            </div>
+            <div class="card-body">
+              <h3>TeXRender</h3>
+              <p>C++'tan LaTeX matematik ifadelerini raylib ve SDL2 pencerelerine, Dear ImGui çizim listelerine, ekran dışı RGBA tamponlarına ya da SVG dosyalarına çiziyor; MicroTeX üzerine kurulu, arka uçtan bağımsız tek bir API.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/clock.jpg" width="1000" height="622" loading="lazy" alt="PIC16F877A mikrodenetleyiciyle yapılmış dört haneli, yedi segmentli LED saat">
+            </div>
+            <div class="card-body">
+              <h3>Mikrodenetleyicili Saat</h3>
+              <p>PIC16F877A üzerinde Assembly ile yazılmış, kesme tabanlı yedi segmentli saat; devre şeması da benim. Saat butonlarla ayarlanıyor.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>Assembly</li><li>PIC16F877A</li><li>Kesmeler</li><li>Devre tasarımı</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/Digital-Clock-Using-Microcontroller"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+<pre class="term" aria-label="cronwhy örnek çıktısı"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
+<span class="hi">At every 15th minute, from 09:00 through
+17:59, Monday through Friday</span>
+
+<span class="dim">  minute        */15   0,15,30,45
+  hour          9-17   9-17
+  day-of-week   1-5    1-5</span></pre>
+            </div>
+            <div class="card-body">
+              <h3>cronwhy</h3>
+              <p>Cron ifadelerini açıklıyor ve crontab dosyalarının tamamını denetliyor: 11 kural; kaçak bir <code>%</code>'yi, ayın günü/haftanın günü VEYA tuzağını ve yaz saatinde kaybolan işleri yakalıyor. Yalnızca Go standart kütüphanesini kullanan tek bir statik binary.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>Go</li><li>CLI</li><li>JSON çıktı</li><li>CI</li></ul>
+              <div class="project-links">
+                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="more-head">GitHub'da diğerleri</h3>
+        <ul class="more">
+          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Devam ediyor: raylib'in C API'sini enum class'lar, varsayılan üye ilklendirme ve değer tipleriyle modern C++'a taşıma.</span><span class="lang-tag">C++</span></a></li>
+          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">C++ için ek anlamsal renklendirmeli, tamamen siyah bir JetBrains teması.</span><span class="lang-tag">Eklenti</span></a></li>
+          <li><a href="https://github.com/nazimaraz/jetbrains-ai-commit"><span class="name">Commit Messages via Claude Code</span><span class="desc">Yalnızca işaretlediğiniz dosyalar için commit mesajı yazan JetBrains eklentisi.</span><span class="lang-tag">Java</span></a></li>
+          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome eklentisi: her HTML5 videonun hızını klavyeden ayarlama.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/scrollpilot"><span class="name">Scrollpilot</span><span class="desc">Chrome eklentisi: ok tuşlarıyla akıcı, hızı ayarlanabilir kaydırma.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/Testing-and-Comparison-of-True-and-Pseudo-Random-Number-Generators"><span class="name">Gerçek ve sözde rastgele sayılar</span><span class="desc">Üniversite projesi: sözde rastgele üreteçlerin çıktısına ve gerçek rastgele sayılara rastgelelik testleri.</span><span class="lang-tag">MATLAB</span></a></li>
+          <li><a href="https://github.com/nazimaraz/Analysis-of-Finding-Quadratic-Regression-Polynomial"><span class="name">Kuadratik regresyon</span><span class="desc">Üniversite projesi: ikinci derece polinom uydurup bir eğik atış benzetiminde kullanma.</span><span class="lang-tag">MATLAB</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================== skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">04 / yetkinlikler</span>
+          <h2 id="skills-title">Yetkinlikler</h2>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>Programlama dilleri</h3>
+            <ul class="tags"><li>C++ 11/14/17/20/23</li><li>C</li><li>Python</li><li>Bash</li><li>Assembly</li><li>Java (temel)</li><li>C# (temel)</li><li>Rust (temel)</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Gerçek zamanlı ve gömülü</h3>
+            <ul class="tags"><li>FreeRTOS</li><li>ARM Cortex-M</li><li>Çoklu iş parçacığı</li><li>Lock-free veri yapıları</li><li>Bellek havuzları</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Tasarım</h3>
+            <ul class="tags"><li>Nesne yönelimli tasarım</li><li>Tasarım desenleri</li><li>Veri yapıları ve algoritmalar</li><li>Veri odaklı tasarım (ECS)</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Kütüphaneler</h3>
+            <ul class="tags"><li>Boost.Asio</li><li>gRPC</li><li>FlatBuffers</li><li>OpenSSL</li><li>zlib</li><li>Qt</li><li>Dear ImGui</li><li>raylib</li><li>Recast Navigation</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Araçlar</h3>
+            <ul class="tags"><li>Git</li><li>SVN</li><li>CMake</li><li>GitLab CI/CD</li><li>Jira</li><li>GDB</li><li>QEMU</li><li>Valgrind</li><li>Sanitizer'lar</li><li>Linux</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Mühendislik</h3>
+            <ul class="tags"><li>Kontrol sistemleri (PID)</li><li>Sinyal işleme</li><li>Sayısal yöntemler</li><li>MATLAB</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Süreç</h3>
+            <ul class="tags"><li>Gereksinim ve test dokümanına dayalı geliştirme</li><li>Entegrasyon</li><li>Sahada kabul testleri</li><li>Scrum</li></ul>
+          </div>
+          <div class="skill">
+            <h3>Konuşulan diller</h3>
+            <ul class="tags"><li>Türkçe (ana dil)</li><li>İngilizce (ileri)</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================== education -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="num">05 / eğitim</span>
+          <h2 id="education-title">Eğitim ve sertifika</h2>
+        </div>
+        <div class="edu">
+          <div class="edu-card">
+            <h3>Lisans, Elektrik ve Elektronik Mühendisliği</h3>
+            <p class="meta">Ankara Üniversitesi <span class="when">· 2015 – 2020</span></p>
+            <dl>
+              <div><dt>GNO</dt><dd>3.32 / 4.00</dd></div>
+              <div><dt>İlgili dersler</dt><dd>Mikroişlemciler, Modern Kontrol, Doğrusal Olmayan Kontrol, Sayısal Yöntemler (hepsi A+), Sayısal Sinyal İşleme</dd></div>
+              <div><dt>Bitirme projesi</dt><dd>I/Q Imbalance Models, Estimation and Compensation</dd></div>
+            </dl>
+          </div>
+          <div class="edu-card">
+            <h3>İleri C++ Programlama Dili Kursu</h3>
+            <p class="meta">Plepa Eğitim <span class="when">· Kas 2025</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact">
+          <span class="num mono">06 / iletişim</span>
+          <h2 id="contact-title">Konuşalım</h2>
+          <p>Gerçek zamanlı, gömülü ya da sinyal işleme yazılımı üzerinde mi çalışıyorsunuz? Duymaktan memnuniyet duyarım. Bana en hızlı e-postayla ulaşabilirsiniz.</p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:nzmcnarz@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>E-posta gönder</a>
+            <a class="btn" href="https://www.linkedin.com/in/nazimcanaraz/"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+          </div>
+          <p class="mail">nzmcnarz@gmail.com · Ankara, Türkiye</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Nazım Can Araz</span>
+      <span>Elle yazılmış HTML ve CSS, bir de JavaScript'te 256 noktalı FFT.</span>
+    </div>
+  </footer>
+</body>
+</html>

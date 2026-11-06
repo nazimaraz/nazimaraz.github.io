@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nazimaraz.github.io/sitemap.xml
