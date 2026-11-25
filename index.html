@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nazım Can Araz · C++ Software Engineer</title>
-  <meta name="description" content="Nazım Can Araz is a C++ software engineer in Ankara building real-time systems: defense simulators, an MMORPG server engine, and a FreeRTOS radar DSP pipeline on ARM Cortex-M.">
+  <meta name="description" content="Nazım Can Araz is a C++ software engineer in Ankara building real-time systems: a FreeRTOS radar DSP pipeline on ARM Cortex-M, an MMORPG server engine, and defense-industry simulators.">
   <meta name="author" content="Nazım Can Araz">
   <link rel="canonical" href="https://nazimaraz.github.io/">
   <link rel="alternate" hreflang="en" href="https://nazimaraz.github.io/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://nazimaraz.github.io/">
   <meta property="og:title" content="Nazım Can Araz · C++ Software Engineer">
-  <meta property="og:description" content="Real-time C++ systems: defense simulators, an MMORPG server engine, and a FreeRTOS radar DSP pipeline on ARM Cortex-M.">
+  <meta property="og:description" content="Real-time C++ systems: a FreeRTOS radar DSP pipeline on ARM Cortex-M, an MMORPG server engine, and defense-industry simulators.">
   <meta property="og:image" content="https://nazimaraz.github.io/assets/img/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.js"></script>
 
   <script type="application/ld+json">
   {
@@ -91,8 +91,16 @@
       <div class="wrap hero-grid">
         <div class="hero-text">
           <p class="eyebrow mono">C++ Software Engineer · Real-time systems · Ankara</p>
-          <h1>Nazım Can Araz</h1>
-          <p class="lede">I write C++ for systems with a deadline: defense vehicle simulators, the server engine of an MMORPG, and now a FreeRTOS radar signal-processing pipeline on ARM Cortex-M.</p>
+          <div class="hero-name">
+            <img class="portrait" src="/assets/img/avatar.jpg" width="96" height="96" alt="Portrait of Nazım Can Araz">
+            <h1>Nazım Can Araz</h1>
+          </div>
+          <p class="lede">I write C++ for systems with a deadline:</p>
+          <ul class="lede-list">
+            <li><span class="yr">2026</span>a radar signal-processing pipeline on FreeRTOS and ARM Cortex-M</li>
+            <li><span class="yr">2022–</span>the server engine of an MMORPG</li>
+            <li><span class="yr">2021–22</span>vehicle and turret simulators for the defense industry</li>
+          </ul>
           <div class="cta">
             <a class="btn primary" href="#projects">See my projects</a>
             <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
@@ -101,7 +109,7 @@
           </div>
         </div>
 
-        <figure class="scope" aria-label="Live spectrum: a JavaScript port of the rt-radar-pipeline Hann, FFT and CA-CFAR chain running on simulated ADC data">
+        <figure class="scope" aria-label="Live spectrum: the rt-radar-pipeline firmware DSP code, compiled to WebAssembly, running on simulated ADC data at a quarter of real time">
           <div class="scope-head">
             <span class="live-dot" aria-hidden="true"></span>
             <b>rt-radar-pipeline</b>
@@ -114,7 +122,7 @@
 
       <div class="wrap">
         <ul class="stats">
-          <li><strong>6+ yrs</strong><span>professional software engineering</span></li>
+          <li><strong>7+ yrs</strong><span>professional software engineering</span></li>
           <li><strong>10,000+</strong><span>entities updated in a fixed 60 Hz server loop</span></li>
           <li><strong>&lt;50 ms</strong><span>client–server network latency</span></li>
           <li><strong>0 bytes</strong><span>of heap in the radar firmware</span></li>
@@ -129,12 +137,12 @@
           <span class="num">01 / about</span>
           <h2 id="about-title">About me</h2>
         </div>
-        <div class="about-grid">
-          <img class="portrait" src="/assets/img/avatar.jpg" width="200" height="200" alt="Portrait of Nazım Can Araz">
+        <div>
           <div class="about-text">
             <p>I'm an <strong>Electrical &amp; Electronics Engineer</strong> (Ankara University, 2020), and most of my career has been C++ that has to finish on time.</p>
-            <p>At <strong>Simsoft</strong> I developed vehicle and turret simulators for defense projects: 60 Hz real-time loops, PID control for aiming and stabilization, and the CIGI link to the image generator. I worked from requirement and test documents and took part in on-site customer acceptance tests. Since 2022 I've been building the server engine of the <strong>Scars of Honor</strong> MMORPG at <strong>Beast Burst</strong> from scratch: a thread-safe ECS, asynchronous networking, and memory pools and lock-free structures that keep the update loop predictable.</p>
-            <p>Now I'm taking that real-time experience closer to the hardware: <strong>bare-metal FreeRTOS on ARM Cortex-M</strong>, radar signal processing, and the rules of safety-critical embedded software. No heap, static allocation, measured deadlines.</p>
+            <p>Right now I'm taking that experience closer to the hardware: <strong>bare-metal FreeRTOS on ARM Cortex-M</strong>, radar signal processing, and the rules of safety-critical embedded software. No heap, static allocation, measured deadlines.</p>
+            <p>Since 2022 I've been building the server engine of the <strong>Scars of Honor</strong> MMORPG at <strong>Beast Burst</strong> from scratch: a thread-safe ECS, asynchronous networking, and memory pools and lock-free structures that keep the update loop predictable.</p>
+            <p>Before that, at <strong>Simsoft</strong>, I developed vehicle and turret simulators for the defense industry: 60 Hz real-time loops, PID control for aiming and stabilization, and the CIGI link to the image generator. I worked from requirement and test documents and took part in on-site customer acceptance tests.</p>
             <p class="subhead">Interests</p>
             <ul class="chips">
               <li>Digital &amp; radar signal processing</li>
@@ -187,7 +195,7 @@
             </div>
             <p class="role">Simulation Software Engineer <span class="where">· Ankara</span></p>
             <ul class="points">
-              <li>Developed vehicle and turret simulators for defense projects in C++14, running in a 60 Hz real-time loop.</li>
+              <li>Developed vehicle and turret simulators for defense-industry projects in C++14, running in a 60 Hz real-time loop.</li>
               <li>Designed <strong>PID control</strong> systems for turret aiming and stabilization.</li>
               <li>Integrated the <strong>CIGI</strong>-based data transfer layer between the simulation framework and the image generator.</li>
               <li>Developed to requirement and test documents; took part in <strong>on-site customer acceptance tests</strong>.</li>
@@ -215,7 +223,7 @@
               <h3>Doğuş Technology</h3>
               <span class="when">Jul 2019 – Jul 2020</span>
             </div>
-            <p class="role">Software Developer Intern</p>
+            <p class="role">Software Developer Intern <span class="where">· Istanbul (remote)</span></p>
             <p>RESTful API services with .NET Core on MongoDB, Elasticsearch and MySQL, in an Agile team.</p>
             <ul class="tags" aria-label="Technologies">
               <li>C#</li><li>.NET Core</li><li>MongoDB</li><li>Elasticsearch</li><li>MySQL</li>
@@ -263,10 +271,10 @@
               <div class="pool">4 static blocks · passed by index · never copied</div>
             </div>
 <pre class="term" aria-label="Firmware console output"><span class="dim">rt-radar-pipeline 0.1.0 | FreeRTOS V11.3.3 | Cortex-M4F @ 25 MHz</span>
-[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0
+[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0 ddrop 0
 [18 ms] #0 <span class="hi">bin 24 (1500 Hz)</span> power 4075.535 thr 27.491
 [18 ms] #0 <span class="hi">bin 80 (5000 Hz)</span> power 991.375 thr 33.315
-[1000 ms] heartbeat #1 | stack headroom 211 words</pre>
+[1000 ms] heartbeat #1 | stack headroom 211 words | log dropped 0</pre>
             <ul class="metrics">
               <li><b>16 ms</b><span>block period</span></li>
               <li><b>~18 KB</b><span>flash at -Os</span></li>
@@ -276,7 +284,66 @@
           </div>
         </article>
 
+        <section class="lab" id="radar-lab" aria-labelledby="lab-title">
+          <div class="lab-text">
+            <h3 id="lab-title">Try the detector</h3>
+            <p>The same C++ that runs on the Cortex-M4F, compiled to WebAssembly. Move the tones, raise the noise or change the false-alarm probability and watch what CA-CFAR still detects. You can also drag a tone on the plot.</p>
+            <div class="lab-controls">
+              <label><span>Tone A frequency <output></output></span><input type="range" name="hzA" min="0" max="8000" step="10" value="1500"></label>
+              <label><span>Tone A amplitude <output></output></span><input type="range" name="ampA" min="0" max="1" step="0.01" value="1"></label>
+              <label><span>Tone B frequency <output></output></span><input type="range" name="hzB" min="0" max="8000" step="10" value="5000"></label>
+              <label><span>Tone B amplitude <output></output></span><input type="range" name="ampB" min="0" max="1" step="0.01" value="0.5"></label>
+              <label><span>Noise <output></output></span><input type="range" name="noise" min="0" max="1" step="0.01" value="0.2"></label>
+              <label><span>False-alarm probability <output></output></span><input type="range" name="pfa" min="1" max="9" step="1" value="6"></label>
+            </div>
+            <p class="lab-caveat">The sliders replace the simulated antenna. ADC encoding and decoding, the Hann window, FFT, power spectrum and CA-CFAR are the firmware's code.</p>
+            <button class="lab-reset" type="button">Reset</button>
+          </div>
+          <div class="scope">
+            <canvas class="lab-canvas" role="img" aria-label="Power spectrum with the CFAR threshold as a dashed line and detections marked"></canvas>
+            <pre class="lab-log"></pre>
+          </div>
+        </section>
+
         <div class="cards">
+          <article class="card">
+            <div class="card-media">
+<pre class="term" aria-label="cronwhy example output"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
+<span class="hi">At every 15th minute, from 09:00 through
+17:59, Monday through Friday</span>
+
+<span class="dim">  minute        */15   0,15,30,45
+  hour          9-17   9-17
+  day-of-week   1-5    1-5</span></pre>
+            </div>
+            <div class="card-body">
+              <p class="kicker">2026</p>
+              <h3>cronwhy</h3>
+              <p>Explains cron expressions and lints whole crontab files: 11 rules catch a stray <code>%</code>, the day-of-month/day-of-week OR trap and jobs lost to DST. A single static binary using only the Go standard library.</p>
+              <ul class="tags" aria-label="Technologies"><li>Go</li><li>CLI</li><li>JSON output</li><li>CI</li></ul>
+              <div class="project-links">
+                <button type="button" class="try" data-demo="cronwhy" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Try it here</button>
+                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demo: a complex signal's formula, substituted values and real/imaginary waveforms updating in real time">
+            </div>
+            <div class="card-body">
+              <p class="kicker">2026</p>
+              <h3>TeXRender</h3>
+              <p>Renders LaTeX math from C++ into raylib or SDL2 windows, Dear ImGui draw lists, offscreen RGBA buffers or SVG files, through one backend-neutral API built on MicroTeX.</p>
+              <ul class="tags" aria-label="Technologies"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <button type="button" class="try" data-demo="texrender" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Try it here</button>
+                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
           <article class="card">
             <div class="card-media">
               <svg viewBox="0 0 400 225" role="img" aria-label="Three epicycles drawing a square wave">
@@ -293,26 +360,14 @@
               </svg>
             </div>
             <div class="card-body">
+              <p class="kicker">2025–26</p>
               <h3>Fourier Series Visualizer</h3>
               <p>Interactive epicycles, waveforms and complex paths in real time, with 13 built-in shapes. Draw a path with the mouse and a discrete Fourier transform rebuilds it, with live LaTeX formulas alongside.</p>
               <ul class="tags" aria-label="Technologies"><li>C++23</li><li>raylib</li><li>Dear ImGui</li><li>WebAssembly</li></ul>
               <div class="project-links">
-                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-play"/></svg>Live demo</a>
+                <button type="button" class="try" data-demo="fourier" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Try it here</button>
+                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Full screen</a>
                 <a href="https://github.com/nazimaraz/Fourier-Series"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">
-              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demo: a complex signal's formula, substituted values and real/imaginary waveforms updating in real time">
-            </div>
-            <div class="card-body">
-              <h3>TeXRender</h3>
-              <p>Renders LaTeX math from C++ into raylib or SDL2 windows, Dear ImGui draw lists, offscreen RGBA buffers or SVG files, through one backend-neutral API built on MicroTeX.</p>
-              <ul class="tags" aria-label="Technologies"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
-              <div class="project-links">
-                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
               </div>
             </div>
           </article>
@@ -322,31 +377,13 @@
               <img src="/assets/img/clock.jpg" width="1000" height="622" loading="lazy" alt="A four-digit seven-segment LED clock built on a PIC16F877A microcontroller">
             </div>
             <div class="card-body">
+              <p class="kicker">2019</p>
               <h3>Microcontroller Clock</h3>
-              <p>An interrupt-driven seven-segment clock on a PIC16F877A, written in Assembly on my own schematic. The time is set with push buttons.</p>
+              <p>An interrupt-driven seven-segment clock on a PIC16F877A, written in Assembly, with its own schematic. The time is set with push buttons. Here you can run the original program on an emulator.</p>
               <ul class="tags" aria-label="Technologies"><li>Assembly</li><li>PIC16F877A</li><li>Interrupts</li><li>Schematic design</li></ul>
               <div class="project-links">
+                <button type="button" class="try" data-demo="clock" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Try it here</button>
                 <a href="https://github.com/nazimaraz/Digital-Clock-Using-Microcontroller"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">
-<pre class="term" aria-label="cronwhy example output"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
-<span class="hi">At every 15th minute, from 09:00 through
-17:59, Monday through Friday</span>
-
-<span class="dim">  minute        */15   0,15,30,45
-  hour          9-17   9-17
-  day-of-week   1-5    1-5</span></pre>
-            </div>
-            <div class="card-body">
-              <h3>cronwhy</h3>
-              <p>Explains cron expressions and lints whole crontab files: 11 rules catch a stray <code>%</code>, the day-of-month/day-of-week OR trap and jobs lost to DST. A single static binary using only the Go standard library.</p>
-              <ul class="tags" aria-label="Technologies"><li>Go</li><li>CLI</li><li>JSON output</li><li>CI</li></ul>
-              <div class="project-links">
-                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Source</a>
               </div>
             </div>
           </article>
@@ -354,11 +391,11 @@
 
         <h3 class="more-head">More on GitHub</h3>
         <ul class="more">
-          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Work in progress: raylib's C API moved to modern C++ with enum classes, default member initialisers and value types.</span><span class="lang-tag">C++</span></a></li>
-          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">A true-black JetBrains theme with extra semantic highlighting for C++.</span><span class="lang-tag">Plugin</span></a></li>
           <li><a href="https://github.com/nazimaraz/jetbrains-ai-commit"><span class="name">Commit Messages via Claude Code</span><span class="desc">JetBrains plugin that writes commit messages for only the files you ticked.</span><span class="lang-tag">Java</span></a></li>
-          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome extension: set any HTML5 video's playback speed from the keyboard.</span><span class="lang-tag">JavaScript</span></a></li>
           <li><a href="https://github.com/nazimaraz/scrollpilot"><span class="name">Scrollpilot</span><span class="desc">Chrome extension: smooth, speed-adjustable scrolling with the arrow keys.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome extension: set any HTML5 video's playback speed from the keyboard.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">A true-black JetBrains theme with extra semantic highlighting for C++.</span><span class="lang-tag">Plugin</span></a></li>
+          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Work in progress: raylib's C API moved to modern C++ with enum classes, default member initialisers and value types.</span><span class="lang-tag">C++</span></a></li>
           <li><a href="https://github.com/nazimaraz/Testing-and-Comparison-of-True-and-Pseudo-Random-Number-Generators"><span class="name">True vs. pseudo-random numbers</span><span class="desc">University project: randomness tests applied to PRNG output and true random numbers.</span><span class="lang-tag">MATLAB</span></a></li>
           <li><a href="https://github.com/nazimaraz/Analysis-of-Finding-Quadratic-Regression-Polynomial"><span class="name">Quadratic regression</span><span class="desc">University project: fit a second-degree polynomial and use it in a projectile-motion simulation.</span><span class="lang-tag">MATLAB</span></a></li>
         </ul>
@@ -429,6 +466,11 @@
           <div class="edu-card">
             <h3>Advanced C++ Programming Language Course</h3>
             <p class="meta">Plepa Eğitim <span class="when">· Nov 2025</span></p>
+            <p class="edu-text">A 160-hour course on modern C++: move semantics, perfect forwarding, concepts, ranges, coroutines and concurrency.</p>
+            <dl>
+              <div><dt>Instructor</dt><dd><a href="https://www.linkedin.com/in/necatiergn/">Necati Ergin</a></dd></div>
+              <div><dt>Links</dt><dd><a href="/assets/doc/cpp-course-certificate.pdf">Certificate of attendance (PDF)</a> · <a href="https://plepa.com/ileri-c-programlama-dili-kurs-icerigi/">Course syllabus</a></dd></div>
+            </dl>
           </div>
         </div>
       </div>
@@ -455,7 +497,7 @@
   <footer class="footer">
     <div class="wrap">
       <span>© <span id="year">2026</span> Nazım Can Araz</span>
-      <span>Hand-written HTML and CSS, plus a 256-point FFT in JavaScript.</span>
+      <span>No framework. The spectrum is the radar firmware's C++, compiled to WebAssembly.</span>
     </div>
   </footer>
 </body>

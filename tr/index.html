@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nazım Can Araz · C++ Yazılım Mühendisi</title>
-  <meta name="description" content="Nazım Can Araz, Ankara'da gerçek zamanlı sistemler geliştiren bir C++ yazılım mühendisi: savunma simülatörleri, bir MMORPG sunucu motoru ve ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme.">
+  <meta name="description" content="Nazım Can Araz, Ankara'da gerçek zamanlı sistemler geliştiren bir C++ yazılım mühendisi: ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme, bir MMORPG sunucu motoru ve savunma sanayii simülatörleri.">
   <meta name="author" content="Nazım Can Araz">
   <link rel="canonical" href="https://nazimaraz.github.io/tr/">
   <link rel="alternate" hreflang="en" href="https://nazimaraz.github.io/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://nazimaraz.github.io/tr/">
   <meta property="og:title" content="Nazım Can Araz · C++ Yazılım Mühendisi">
-  <meta property="og:description" content="Gerçek zamanlı C++ sistemleri: savunma simülatörleri, bir MMORPG sunucu motoru ve ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme.">
+  <meta property="og:description" content="Gerçek zamanlı C++ sistemleri: ARM Cortex-M üzerinde FreeRTOS ile radar sinyal işleme, bir MMORPG sunucu motoru ve savunma sanayii simülatörleri.">
   <meta property="og:image" content="https://nazimaraz.github.io/assets/img/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.js"></script>
 
   <script type="application/ld+json">
   {
@@ -91,8 +91,16 @@
       <div class="wrap hero-grid">
         <div class="hero-text">
           <p class="eyebrow mono">C++ Yazılım Mühendisi · Gerçek zamanlı sistemler · Ankara</p>
-          <h1>Nazım Can Araz</h1>
-          <p class="lede">Süre sınırı olan sistemler için C++ yazıyorum: savunma projelerinde araç simülatörleri, bir MMORPG'nin sunucu motoru ve şimdi de ARM Cortex-M üzerinde FreeRTOS ile çalışan bir radar sinyal işleme hattı.</p>
+          <div class="hero-name">
+            <img class="portrait" src="/assets/img/avatar.jpg" width="96" height="96" alt="Nazım Can Araz'ın portresi">
+            <h1>Nazım Can Araz</h1>
+          </div>
+          <p class="lede">Süre sınırı olan sistemler için C++ yazıyorum:</p>
+          <ul class="lede-list">
+            <li><span class="yr">2026</span>ARM Cortex-M üzerinde FreeRTOS ile çalışan bir radar sinyal işleme hattı</li>
+            <li><span class="yr">2022–</span>bir MMORPG'nin sunucu motoru</li>
+            <li><span class="yr">2021–22</span>savunma sanayii projelerinde araç ve taret simülatörleri</li>
+          </ul>
           <div class="cta">
             <a class="btn primary" href="#projects">Projelerime göz at</a>
             <a class="btn" href="https://github.com/nazimaraz"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
@@ -101,7 +109,7 @@
           </div>
         </div>
 
-        <figure class="scope" aria-label="Canlı spektrum: rt-radar-pipeline'daki Hann, FFT ve CA-CFAR zincirinin JavaScript kopyası, benzetilmiş ADC verisi üzerinde çalışıyor">
+        <figure class="scope" aria-label="Canlı spektrum: rt-radar-pipeline firmware'inin DSP kodu WebAssembly'ye derlenmiş halde, benzetilmiş ADC verisi üzerinde gerçek zamanın dörtte biri hızında çalışıyor">
           <div class="scope-head">
             <span class="live-dot" aria-hidden="true"></span>
             <b>rt-radar-pipeline</b>
@@ -114,7 +122,7 @@
 
       <div class="wrap">
         <ul class="stats">
-          <li><strong>6+ yıl</strong><span>profesyonel yazılım mühendisliği</span></li>
+          <li><strong>7+ yıl</strong><span>profesyonel yazılım mühendisliği</span></li>
           <li><strong>10.000+</strong><span>nesne, sabit 60 Hz sunucu döngüsünde</span></li>
           <li><strong>&lt;50 ms</strong><span>istemci–sunucu ağ gecikmesi</span></li>
           <li><strong>0 bayt</strong><span>heap, radar firmware'inde</span></li>
@@ -129,12 +137,12 @@
           <span class="num">01 / hakkımda</span>
           <h2 id="about-title">Hakkımda</h2>
         </div>
-        <div class="about-grid">
-          <img class="portrait" src="/assets/img/avatar.jpg" width="200" height="200" alt="Nazım Can Araz'ın portresi">
+        <div>
           <div class="about-text">
             <p><strong>Elektrik-Elektronik Mühendisiyim</strong> (Ankara Üniversitesi, 2020). Kariyerimin büyük bölümünde zamanında bitmesi gereken C++ kodu yazdım.</p>
-            <p><strong>Simsoft</strong>'ta savunma projeleri için araç ve taret simülatörleri geliştirdim: 60 Hz gerçek zamanlı döngüler, nişanlama ve stabilizasyon için PID kontrol, Görüntü Üreteci ile CIGI bağlantısı. Gereksinim ve test dokümanlarına göre çalıştım, sahada müşteri kabul testlerinde görev aldım. 2022'den beri <strong>Beast Burst</strong>'te <strong>Scars of Honor</strong> MMORPG'sinin sunucu motorunu sıfırdan geliştiriyorum: iş parçacığı güvenli bir ECS, asenkron ağ katmanı, güncelleme döngüsünü öngörülebilir tutan bellek havuzları ve lock-free yapılar.</p>
-            <p>Şimdi bu gerçek zamanlı deneyimi donanıma yaklaştırıyorum: <strong>ARM Cortex-M üzerinde bare-metal FreeRTOS</strong>, radar sinyal işleme ve emniyet-kritik gömülü yazılımın kuralları. Heap yok, statik bellek, ölçülen süre sınırları.</p>
+            <p>Şu anda bu deneyimi donanıma yaklaştırıyorum: <strong>ARM Cortex-M üzerinde bare-metal FreeRTOS</strong>, radar sinyal işleme ve emniyet-kritik gömülü yazılımın kuralları. Heap yok, statik bellek, ölçülen süre sınırları.</p>
+            <p>2022'den beri <strong>Beast Burst</strong>'te <strong>Scars of Honor</strong> MMORPG'sinin sunucu motorunu sıfırdan geliştiriyorum: iş parçacığı güvenli bir ECS, asenkron ağ katmanı, güncelleme döngüsünü öngörülebilir tutan bellek havuzları ve lock-free yapılar.</p>
+            <p>Öncesinde <strong>Simsoft</strong>'ta savunma sanayii projeleri için araç ve taret simülatörleri geliştirdim: 60 Hz gerçek zamanlı döngüler, nişanlama ve stabilizasyon için PID kontrol, Görüntü Üreteci ile CIGI bağlantısı. Gereksinim ve test dokümanlarına göre çalıştım, sahada müşteri kabul testlerinde görev aldım.</p>
             <p class="subhead">İlgi alanları</p>
             <ul class="chips">
               <li>Sayısal ve radar sinyal işleme</li>
@@ -187,7 +195,7 @@
             </div>
             <p class="role">Simülasyon Yazılım Mühendisi <span class="where">· Ankara</span></p>
             <ul class="points">
-              <li>Savunma projeleri için C++14 ile 60 Hz gerçek zamanlı döngüde çalışan araç ve taret simülatörleri geliştirdim.</li>
+              <li>Savunma sanayii projeleri için C++14 ile 60 Hz gerçek zamanlı döngüde çalışan araç ve taret simülatörleri geliştirdim.</li>
               <li>Taret nişanlama ve stabilizasyonu için <strong>PID kontrol</strong> sistemleri tasarladım.</li>
               <li>Simülasyon çatısı ile Görüntü Üreteci arasındaki <strong>CIGI</strong> tabanlı veri aktarım katmanını entegre ettim.</li>
               <li>Gereksinim ve test dokümanlarına göre geliştirdim; <strong>sahada müşteri kabul testlerinde</strong> görev aldım.</li>
@@ -215,7 +223,7 @@
               <h3>Doğuş Teknoloji</h3>
               <span class="when">Tem 2019 – Tem 2020</span>
             </div>
-            <p class="role">Yazılım Geliştirici Stajyer</p>
+            <p class="role">Yazılım Geliştirici Stajyer <span class="where">· İstanbul (uzaktan)</span></p>
             <p>Agile bir ekipte .NET Core ile MongoDB, Elasticsearch ve MySQL kullanan RESTful API servisleri geliştirdim.</p>
             <ul class="tags" aria-label="Teknolojiler">
               <li>C#</li><li>.NET Core</li><li>MongoDB</li><li>Elasticsearch</li><li>MySQL</li>
@@ -241,7 +249,7 @@
             <p>Emüle edilmiş bir ARM Cortex-M4F (QEMU, MPS2-AN386) üzerinde bare-metal çalışan, C++23 ile yazılmış katı gerçek zamanlı bir radar sinyal işleme hattı. Her 16 ms'de 256 ADC örneğinden oluşan bir blok alıyor, Hann penceresi ve radix-2 FFT uyguluyor, hedefleri CA-CFAR ile tespit ediyor.</p>
             <ul class="checks">
               <li><strong>Heap yok.</strong> Dinamik bellek kapalı ve linker <code>malloc</code>/<code>free</code>'yi sarmalıyor; heap kullanan kod derlenmiyor.</li>
-              <li><strong>Başlangıç kodu,</strong> linker script ve UART sürücüsü bana ait; exception, RTTI ya da gizli bir runtime yok.</li>
+              <li><strong>Hazır başlangıç kodu yok:</strong> startup, linker script ve UART sürücüsü projenin kendisinde; exception, RTTI ya da gizli bir runtime da yok.</li>
               <li><strong>Sıfır kopya:</strong> görevler dört statik tamponu paylaşıyor; kuyruklardan yalnızca tampon indeksleri geçiyor.</li>
               <li><strong>Rate-monotonic öncelikler;</strong> kaçırılan süre sınırları, kayıp bloklar ve yığın payı çalışırken ölçülüyor.</li>
               <li><strong>İşletim sistemi soyutlama katmanı:</strong> VxWorks'e ya da bir ARINC 653 bölmeli işletim sistemine geçmek yeni bir hat değil, yalnızca yeni bir arka uç demek.</li>
@@ -263,10 +271,10 @@
               <div class="pool">4 statik blok · indeksle aktarılıyor · hiç kopyalanmıyor</div>
             </div>
 <pre class="term" aria-label="Firmware konsol çıktısı"><span class="dim">rt-radar-pipeline 0.1.0 | FreeRTOS V11.3.3 | Cortex-M4F @ 25 MHz</span>
-[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0
+[18 ms] block #0 dsp 1/1 ms | free 3 full 0 | lost 0 ovr 0 ddrop 0
 [18 ms] #0 <span class="hi">bin 24 (1500 Hz)</span> power 4075.535 thr 27.491
 [18 ms] #0 <span class="hi">bin 80 (5000 Hz)</span> power 991.375 thr 33.315
-[1000 ms] heartbeat #1 | stack headroom 211 words</pre>
+[1000 ms] heartbeat #1 | stack headroom 211 words | log dropped 0</pre>
             <ul class="metrics">
               <li><b>16 ms</b><span>blok periyodu</span></li>
               <li><b>~18 KB</b><span>flash (-Os)</span></li>
@@ -276,7 +284,66 @@
           </div>
         </article>
 
+        <section class="lab" id="radar-lab" aria-labelledby="lab-title">
+          <div class="lab-text">
+            <h3 id="lab-title">Dedektörü deneyin</h3>
+            <p>Cortex-M4F üzerinde çalışan C++ kodunun WebAssembly derlemesi. Tonların yerini, gürültüyü ya da yanlış alarm olasılığını değiştirin; CA-CFAR'ın hâlâ neleri tespit ettiğine bakın. Tonları grafiğin üzerinde sürükleyebilirsiniz de.</p>
+            <div class="lab-controls">
+              <label><span>A tonu frekansı <output></output></span><input type="range" name="hzA" min="0" max="8000" step="10" value="1500"></label>
+              <label><span>A tonu genliği <output></output></span><input type="range" name="ampA" min="0" max="1" step="0.01" value="1"></label>
+              <label><span>B tonu frekansı <output></output></span><input type="range" name="hzB" min="0" max="8000" step="10" value="5000"></label>
+              <label><span>B tonu genliği <output></output></span><input type="range" name="ampB" min="0" max="1" step="0.01" value="0.5"></label>
+              <label><span>Gürültü <output></output></span><input type="range" name="noise" min="0" max="1" step="0.01" value="0.2"></label>
+              <label><span>Yanlış alarm olasılığı <output></output></span><input type="range" name="pfa" min="1" max="9" step="1" value="6"></label>
+            </div>
+            <p class="lab-caveat">Kaydırıcılar yalnızca benzetilmiş anten sinyalinin yerini alıyor. ADC kodlama ve çözme, Hann penceresi, FFT, güç spektrumu ve CA-CFAR firmware'in kendi kodu.</p>
+            <button class="lab-reset" type="button">Sıfırla</button>
+          </div>
+          <div class="scope">
+            <canvas class="lab-canvas" role="img" aria-label="Kesikli çizgiyle CFAR eşiği ve işaretli tespitlerle güç spektrumu"></canvas>
+            <pre class="lab-log"></pre>
+          </div>
+        </section>
+
         <div class="cards">
+          <article class="card">
+            <div class="card-media">
+<pre class="term" aria-label="cronwhy örnek çıktısı"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
+<span class="hi">At every 15th minute, from 09:00 through
+17:59, Monday through Friday</span>
+
+<span class="dim">  minute        */15   0,15,30,45
+  hour          9-17   9-17
+  day-of-week   1-5    1-5</span></pre>
+            </div>
+            <div class="card-body">
+              <p class="kicker">2026</p>
+              <h3>cronwhy</h3>
+              <p>Cron ifadelerini açıklıyor ve crontab dosyalarının tamamını denetliyor: 11 kural; kaçak bir <code>%</code>'yi, ayın günü/haftanın günü VEYA tuzağını ve yaz saatinde kaybolan işleri yakalıyor. Yalnızca Go standart kütüphanesini kullanan tek bir statik binary.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>Go</li><li>CLI</li><li>JSON çıktı</li><li>CI</li></ul>
+              <div class="project-links">
+                <button type="button" class="try" data-demo="cronwhy" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Burada dene</button>
+                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demosu: karmaşık bir sinyalin formülü, yerine konmuş değerleri ve gerçel/sanal dalga biçimleri gerçek zamanlı güncelleniyor">
+            </div>
+            <div class="card-body">
+              <p class="kicker">2026</p>
+              <h3>TeXRender</h3>
+              <p>C++'tan LaTeX matematik ifadelerini raylib ve SDL2 pencerelerine, Dear ImGui çizim listelerine, ekran dışı RGBA tamponlarına ya da SVG dosyalarına çiziyor; MicroTeX üzerine kurulu, arka uçtan bağımsız tek bir API.</p>
+              <ul class="tags" aria-label="Teknolojiler"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
+              <div class="project-links">
+                <button type="button" class="try" data-demo="texrender" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Burada dene</button>
+                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
+              </div>
+            </div>
+          </article>
+
           <article class="card">
             <div class="card-media">
               <svg viewBox="0 0 400 225" role="img" aria-label="Kare dalga çizen üç episikl">
@@ -293,26 +360,14 @@
               </svg>
             </div>
             <div class="card-body">
+              <p class="kicker">2025–26</p>
               <h3>Fourier Serisi Görselleştirici</h3>
               <p>Episikller, dalga biçimleri ve karmaşık yollar gerçek zamanlı ve etkileşimli; 13 hazır şekil var. Fareyle çizdiğiniz yolu ayrık Fourier dönüşümü yeniden kuruyor, yanında canlı LaTeX formülleri.</p>
               <ul class="tags" aria-label="Teknolojiler"><li>C++23</li><li>raylib</li><li>Dear ImGui</li><li>WebAssembly</li></ul>
               <div class="project-links">
-                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-play"/></svg>Canlı demo</a>
+                <button type="button" class="try" data-demo="fourier" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Burada dene</button>
+                <a href="https://nazimaraz.github.io/Fourier-Series/"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Tam ekran</a>
                 <a href="https://github.com/nazimaraz/Fourier-Series"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">
-              <img src="/assets/img/texrender.gif" width="920" height="507" loading="lazy" alt="TeXRender demosu: karmaşık bir sinyalin formülü, yerine konmuş değerleri ve gerçel/sanal dalga biçimleri gerçek zamanlı güncelleniyor">
-            </div>
-            <div class="card-body">
-              <h3>TeXRender</h3>
-              <p>C++'tan LaTeX matematik ifadelerini raylib ve SDL2 pencerelerine, Dear ImGui çizim listelerine, ekran dışı RGBA tamponlarına ya da SVG dosyalarına çiziyor; MicroTeX üzerine kurulu, arka uçtan bağımsız tek bir API.</p>
-              <ul class="tags" aria-label="Teknolojiler"><li>C++17</li><li>raylib</li><li>SDL2</li><li>SVG</li><li>WebAssembly</li></ul>
-              <div class="project-links">
-                <a href="https://github.com/nazimaraz/TeXRender"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
               </div>
             </div>
           </article>
@@ -322,31 +377,13 @@
               <img src="/assets/img/clock.jpg" width="1000" height="622" loading="lazy" alt="PIC16F877A mikrodenetleyiciyle yapılmış dört haneli, yedi segmentli LED saat">
             </div>
             <div class="card-body">
+              <p class="kicker">2019</p>
               <h3>Mikrodenetleyicili Saat</h3>
-              <p>PIC16F877A üzerinde Assembly ile yazılmış, kesme tabanlı yedi segmentli saat; devre şeması da benim. Saat butonlarla ayarlanıyor.</p>
+              <p>PIC16F877A üzerinde Assembly ile yazılmış, kesme tabanlı yedi segmentli saat; devre şemasıyla birlikte. Saat butonlarla ayarlanıyor. Burada özgün programı bir emülatörde çalıştırabilirsiniz.</p>
               <ul class="tags" aria-label="Teknolojiler"><li>Assembly</li><li>PIC16F877A</li><li>Kesmeler</li><li>Devre tasarımı</li></ul>
               <div class="project-links">
+                <button type="button" class="try" data-demo="clock" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Burada dene</button>
                 <a href="https://github.com/nazimaraz/Digital-Clock-Using-Microcontroller"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">
-<pre class="term" aria-label="cronwhy örnek çıktısı"><span class="prompt">$</span> cronwhy explain "*/15 9-17 * * 1-5"
-<span class="hi">At every 15th minute, from 09:00 through
-17:59, Monday through Friday</span>
-
-<span class="dim">  minute        */15   0,15,30,45
-  hour          9-17   9-17
-  day-of-week   1-5    1-5</span></pre>
-            </div>
-            <div class="card-body">
-              <h3>cronwhy</h3>
-              <p>Cron ifadelerini açıklıyor ve crontab dosyalarının tamamını denetliyor: 11 kural; kaçak bir <code>%</code>'yi, ayın günü/haftanın günü VEYA tuzağını ve yaz saatinde kaybolan işleri yakalıyor. Yalnızca Go standart kütüphanesini kullanan tek bir statik binary.</p>
-              <ul class="tags" aria-label="Teknolojiler"><li>Go</li><li>CLI</li><li>JSON çıktı</li><li>CI</li></ul>
-              <div class="project-links">
-                <a href="https://github.com/nazimaraz/cronwhy"><svg aria-hidden="true"><use href="#i-github"/></svg>Kaynak</a>
               </div>
             </div>
           </article>
@@ -354,11 +391,11 @@
 
         <h3 class="more-head">GitHub'da diğerleri</h3>
         <ul class="more">
-          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Devam ediyor: raylib'in C API'sini enum class'lar, varsayılan üye ilklendirme ve değer tipleriyle modern C++'a taşıma.</span><span class="lang-tag">C++</span></a></li>
-          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">C++ için ek anlamsal renklendirmeli, tamamen siyah bir JetBrains teması.</span><span class="lang-tag">Eklenti</span></a></li>
           <li><a href="https://github.com/nazimaraz/jetbrains-ai-commit"><span class="name">Commit Messages via Claude Code</span><span class="desc">Yalnızca işaretlediğiniz dosyalar için commit mesajı yazan JetBrains eklentisi.</span><span class="lang-tag">Java</span></a></li>
-          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome eklentisi: her HTML5 videonun hızını klavyeden ayarlama.</span><span class="lang-tag">JavaScript</span></a></li>
           <li><a href="https://github.com/nazimaraz/scrollpilot"><span class="name">Scrollpilot</span><span class="desc">Chrome eklentisi: ok tuşlarıyla akıcı, hızı ayarlanabilir kaydırma.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/tempo"><span class="name">Tempo</span><span class="desc">Chrome eklentisi: her HTML5 videonun hızını klavyeden ayarlama.</span><span class="lang-tag">JavaScript</span></a></li>
+          <li><a href="https://github.com/nazimaraz/real-black-clion-theme"><span class="name">Real Black for CLion</span><span class="desc">C++ için ek anlamsal renklendirmeli, tamamen siyah bir JetBrains teması.</span><span class="lang-tag">Eklenti</span></a></li>
+          <li><a href="https://github.com/nazimaraz/raylib-modern"><span class="name">raylib-modern</span><span class="desc">Devam ediyor: raylib'in C API'sini enum class'lar, varsayılan üye ilklendirme ve değer tipleriyle modern C++'a taşıma.</span><span class="lang-tag">C++</span></a></li>
           <li><a href="https://github.com/nazimaraz/Testing-and-Comparison-of-True-and-Pseudo-Random-Number-Generators"><span class="name">Gerçek ve sözde rastgele sayılar</span><span class="desc">Üniversite projesi: sözde rastgele üreteçlerin çıktısına ve gerçek rastgele sayılara rastgelelik testleri.</span><span class="lang-tag">MATLAB</span></a></li>
           <li><a href="https://github.com/nazimaraz/Analysis-of-Finding-Quadratic-Regression-Polynomial"><span class="name">Kuadratik regresyon</span><span class="desc">Üniversite projesi: ikinci derece polinom uydurup bir eğik atış benzetiminde kullanma.</span><span class="lang-tag">MATLAB</span></a></li>
         </ul>
@@ -429,6 +466,11 @@
           <div class="edu-card">
             <h3>İleri C++ Programlama Dili Kursu</h3>
             <p class="meta">Plepa Eğitim <span class="when">· Kas 2025</span></p>
+            <p class="edu-text">Modern C++ üzerine 160 saatlik kurs: taşıma semantiği, mükemmel gönderim, concepts, ranges, coroutines ve eşzamanlılık.</p>
+            <dl>
+              <div><dt>Eğitmen</dt><dd><a href="https://www.linkedin.com/in/necatiergn/">Necati Ergin</a></dd></div>
+              <div><dt>Bağlantılar</dt><dd><a href="/assets/doc/cpp-course-certificate.pdf">Katılım sertifikası (PDF)</a> · <a href="https://plepa.com/ileri-c-programlama-dili-kurs-icerigi/">Kurs içeriği</a></dd></div>
+            </dl>
           </div>
         </div>
       </div>
@@ -455,7 +497,7 @@
   <footer class="footer">
     <div class="wrap">
       <span>© <span id="year">2026</span> Nazım Can Araz</span>
-      <span>Elle yazılmış HTML ve CSS, bir de JavaScript'te 256 noktalı FFT.</span>
+      <span>Framework yok. Spektrum, radar firmware'inin WebAssembly'ye derlenmiş C++ kodu.</span>
     </div>
   </footer>
 </body>
